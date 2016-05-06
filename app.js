@@ -7,7 +7,7 @@ angular.module('MovieSearch', ['angularMoment','ngRoute'])
             }).when('/details/:id', {
                 template : '<h1>A New Page Example <a ng-href="/">Go Home</a></h1>'
             }).when('/404', {
-                template : '<h1>404. This page doesn\'t exist. <a ng-href="/">Go Home</a></h1>'
+                templateUrl:'partials/error.html'
             }).otherwise({
                 redirectTo: '/404'
             });
