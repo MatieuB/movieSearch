@@ -1,7 +1,17 @@
 angular.module('MovieSearch')
   .service('mainService',['$http','$log',function($http,$log) {
+    var self = this
     this.movieAPI = 'https://g-omdbapi.herokuapp.com'
-    this.test='hello, am I here?';
+    this.title='hello dolly'
+
+
+    this.getMovies = function(movieName) {
+        var movie = movieName.split(' ').join('+');
+        return $http.get(self.movieAPI +'/?t='+ movie +'&y=&plot=short&r=json')
+          .then(function(data) {
+            $log.info(data)
+          })
+      }
 
     this.movies = [
       {

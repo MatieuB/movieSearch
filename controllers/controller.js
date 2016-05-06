@@ -3,8 +3,8 @@ angular.module('MovieSearch')
     $scope.vm = {}
     $scope.test = mainService.test
     $scope.vm.movies = mainService.movies
-      
+    $scope.vm.title =''
+    $scope.movieAPI = mainService.movieAPI
+    $scope.getMovies = mainService.getMovies($scope.vm.title)
 
-    // $scope.getMovies = mainService.getMovies()
-    // $scope.movieTitle = mainService.title
 }])
