@@ -1,0 +1,14 @@
+<article class="panel panel default col-md-offset-2 col-md-3" ng-repeat="movie in vm.movies">
+  <div>
+    <h2>{{movie.Title}}</h2>
+    <img ng-src="{{movie.Poster}}" alt="Poster">
+    <p>{{movie.Year}}</p>
+    <p>Rating:{{movie.Rated}}</p>
+    <p>Director: {{movie.Director}}</p>
+    <p>Cast: {{movie.Cast}}</p>
+    <p>Genre: {{movie.Genre}}</p>
+    <p>Plot: {{movie.Plot}}</p>
+    <p>IMDB Rating: {{movie.imdbRating}}</p>
+    <p>{{movie.date}}</p>
+  </div>
+</article>

@@ -16,12 +16,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <!-- ngRoute -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+    <!-- load momentJS (required for angular-moment) -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <!-- load angular-moment -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
     <!-- Instantiate Module -->
     <script src="./app.js"></script>
     <!-- Controllers -->
     <script src="controllers/controller.js"></script>
     <!-- Directives -->
     <script src="directives/main_directive.js"></script>
+    <!-- Services -->
+    <script src="./services/mainService.js"></script>
 
 
 
@@ -29,9 +37,12 @@
 </head>
 
 <body ng-controller="Ctrl">
-<nav-bar></nav-bar>
-{{1+2}}
-<p ng-bind="movieTitle"></p>
+    <nav-bar></nav-bar>
+    <movie-post></movie-post>
+    
+
+    <p ng-bind="movieTitle"></p>
+    <p>{{test}}</p>
 
 </body>
 
